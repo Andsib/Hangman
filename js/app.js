@@ -1,0 +1,4 @@
+showCategories();
+showGame();
+createSoundTool();
+setAudio();

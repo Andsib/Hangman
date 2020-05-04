@@ -1,0 +1,29 @@
+@mixin manSize($width, $height, $bg, $pos) {
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    position: $pos;
+}
+@mixin background($img, $pos, $repeat, $size) {
+    background-image: $img;
+    background-position: $pos;
+    background-repeat: $repeat;
+    background-size: $size;
+}
+@mixin layer($display, $position, $top, $right, $bottom, $left, $index, $text) {
+    display: $display;
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $index;
+    text-align: $text;
+}
+@mixin button($cursor, $line, $marTop, $width, $borderR) {
+    cursor: $cursor;
+    outline: $line;
+    margin-top: $marTop;
+    width: $width;
+    border-radius: $borderR;
+}

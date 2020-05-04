@@ -1,0 +1,730 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  background-image: url("..//img/wood.png");
+  background-position: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px;
+}
+
+.layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.layerBlock {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.infoText {
+  display: block;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: darkred;
+}
+
+.okButton {
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.okButton:hover {
+  background: grey;
+  color: white;
+}
+
+.mainTitle {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  color: red;
+  text-shadow: 5px 5px 4px lightblue;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 70px;
+  background-image: url("..//img/loop.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+.listsTitle {
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.lists {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.category {
+  margin: 5px;
+  width: 300px;
+  height: 40px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: #6baec6;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  outline-style: none;
+  transition: all 0.3s;
+}
+
+.category:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.enterWordWrapper {
+  display: none;
+}
+
+.modalWrapper {
+  height: 100px;
+  width: 200px;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: fixed;
+  top: 10px;
+  left: 45%;
+}
+
+.game {
+  padding: 20px;
+  display: none;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.userLetterWrapper {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px 0px;
+  background: linear-gradient(to top, grey, white);
+  border-radius: 10px;
+}
+
+.enterSection {
+  text-transform: lowercase;
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.submit {
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  width: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  color: black;
+  background: linear-gradient(to top, darkred, red);
+}
+
+.backButton {
+  background-color: lightgrey;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  font-size: 22px;
+  border-radius: 5px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 17%;
+  transition: all 0.3s;
+}
+
+.backButton:hover {
+  background-color: black;
+  color: red;
+}
+
+.wordGameWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.guessWord {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.chosenLettersBox {
+  border: 1px solid black;
+  background-color: lightblue;
+  color: black;
+  width: 300px;
+  height: 300px;
+  text-align: left;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 5px;
+  position: relative;
+  resize: none;
+}
+
+.hungManBox {
+  border: 1px solid black;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.letterBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  border: 1px solid black;
+  background-color: sandybrown;
+  border-radius: 5px;
+}
+
+.hiddenLetter {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+.bottomLine {
+  width: 180px;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.mainLine {
+  width: 7px;
+  height: 260px;
+  background-color: black;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.upperLine {
+  width: 210px;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  top: 17px;
+  left: 10px;
+}
+
+.supportLine {
+  width: 45px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 28px;
+  left: 13px;
+  transform: rotate(-25deg);
+}
+
+.ropeLine {
+  width: 7px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 24px;
+  left: 213px;
+}
+
+.headOfMan {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 57px;
+  left: 210px;
+  border-radius: 50%;
+}
+
+.bodyOfMan {
+  width: 7px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  top: 80px;
+  left: 213px;
+}
+
+.leftHand {
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 94px;
+  left: 213px;
+  transform: rotate(-25deg);
+}
+
+.rightHand {
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 100px;
+  left: 213px;
+  transform: rotate(5deg);
+}
+
+.leftLeg {
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 125px;
+  left: 210px;
+  transform: rotate(10deg);
+}
+
+.rightLeg {
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 125px;
+  left: 219px;
+  transform: rotate(-10deg);
+}
+
+.endGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  background-image: url("../img/wood2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.endButton {
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  padding: 10px;
+  width: 30%;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.endButton:hover {
+  background: grey;
+  color: white;
+}
+
+.winGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  background-image: url("../img/runningMan.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.soundBox {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+.musicButtonOff {
+  width: 70px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../img/musicOff.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.musicButtonOn {
+  width: 70px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../img/musicOn.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 920px) {
+  .mainTitle {
+    width: 420px;
+    background-size: 60px 60px;
+    background-position: left;
+    font-size: 52px;
+    margin: 20px auto;
+  }
+
+  .soundBox {
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .backButton {
+    width: 40px;
+    font-size: 22px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  .game {
+    padding: 0px;
+  }
+
+  .userLetterWrapper {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 0px;
+  }
+
+  .enterSection {
+    width: 100px;
+  }
+
+  .chosenLettersBox {
+    width: 45%;
+    height: 200px;
+    font-size: 18px;
+    letter-spacing: 5px;
+    overflow: auto;
+  }
+
+  .hungManBox {
+    width: 45%;
+    height: 200px;
+  }
+
+  .letterBox {
+    width: 30px;
+    height: 30px;
+    margin: 0px 3px;
+  }
+
+  .bottomLine {
+    width: 150px;
+    height: 3px;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .mainLine {
+    width: 3px;
+    height: 182px;
+    bottom: 7px;
+    left: 5px;
+  }
+
+  .upperLine {
+    width: 160px;
+    height: 3px;
+    top: 7px;
+    left: 5px;
+  }
+
+  .supportLine {
+    width: 40px;
+    height: 3px;
+    top: 15px;
+    left: 5px;
+  }
+
+  .ropeLine {
+    width: 3px;
+    height: 20px;
+    top: 10px;
+    left: 162px;
+  }
+
+  .headOfMan {
+    width: 25px;
+    height: 25px;
+    top: 23px;
+    left: 160px;
+  }
+
+  .bodyOfMan {
+    width: 4px;
+    height: 40px;
+    top: 35px;
+    left: 160px;
+  }
+
+  .leftHand {
+    width: 10px;
+    height: 3px;
+    top: 52px;
+    left: 163px;
+  }
+
+  .rightHand {
+    width: 10px;
+    height: 3px;
+    top: 57px;
+    left: 163px;
+  }
+
+  .leftLeg {
+    width: 3px;
+    height: 30px;
+    top: 70px;
+    left: 158px;
+  }
+
+  .rightLeg {
+    width: 3px;
+    height: 30px;
+    top: 70px;
+    left: 165px;
+  }
+}
+@media screen and (max-width: 482px) {
+  .container {
+    padding: 0px 10px;
+  }
+
+  .mainTitle {
+    max-width: 200px;
+    margin: 5px auto;
+    font-size: 40px;
+    background: none;
+  }
+
+  .soundBox {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .backButton {
+    width: 35px;
+    font-size: 18px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  .game {
+    padding: 5px;
+  }
+
+  .userLetterWrapper {
+    width: 120px;
+    margin: 0 auto;
+    padding: 5px 0px;
+  }
+
+  .enterSection {
+    height: 35px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .chosenLettersBox {
+    width: 45%;
+    height: 150px;
+    font-size: 18px;
+    letter-spacing: 5px;
+    overflow: auto;
+  }
+
+  .hungManBox {
+    width: 45%;
+    height: 150px;
+  }
+
+  .letterBox {
+    width: 20px;
+    height: 20px;
+    margin: 0px 3px;
+  }
+
+  .bottomLine {
+    width: 100px;
+    height: 3px;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .mainLine {
+    width: 3px;
+    height: 132px;
+    bottom: 7px;
+    left: 5px;
+  }
+
+  .upperLine {
+    width: 100px;
+    height: 3px;
+    top: 7px;
+    left: 5px;
+  }
+
+  .supportLine {
+    width: 40px;
+    height: 3px;
+    top: 15px;
+    left: 5px;
+  }
+
+  .ropeLine {
+    width: 3px;
+    height: 20px;
+    top: 10px;
+    left: 102px;
+  }
+
+  .headOfMan {
+    width: 20px;
+    height: 20px;
+    top: 23px;
+    left: 100px;
+  }
+
+  .bodyOfMan {
+    width: 4px;
+    height: 30px;
+    top: 35px;
+    left: 103px;
+  }
+
+  .leftHand {
+    width: 10px;
+    height: 3px;
+    top: 47px;
+    left: 105px;
+  }
+
+  .rightHand {
+    width: 10px;
+    height: 3px;
+    top: 51px;
+    left: 105px;
+  }
+
+  .leftLeg {
+    width: 3px;
+    height: 20px;
+    top: 60px;
+    left: 102px;
+  }
+
+  .rightLeg {
+    width: 3px;
+    height: 20px;
+    top: 60px;
+    left: 106px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
