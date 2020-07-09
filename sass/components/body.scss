@@ -1,0 +1,16 @@
+@import '../mixin.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+    @include background(url("..//img/wood.png"), none, no-repeat, cover);
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+}

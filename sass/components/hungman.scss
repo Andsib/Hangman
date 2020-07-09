@@ -1,0 +1,63 @@
+@import '../mixin.scss';
+
+.bottomLine {
+    @include manSize (180px, 7px, black, absolute);
+    bottom: 10px;
+    left: 10px;
+}
+.mainLine {
+    @include manSize (7px, 260px, black, absolute);
+    bottom: 15px;
+    left: 10px;
+}
+.upperLine {
+    @include manSize (210px, 7px, black, absolute);
+    top: 17px;
+    left: 10px;
+}
+.supportLine {
+    @include manSize (45px, 5px, black, absolute);
+    top: 28px;
+    left: 13px;
+    transform: rotate(-25deg);
+}
+.ropeLine {
+    @include manSize (7px, 40px, black, absolute);
+    top: 24px;
+    left: 213px;
+}
+.headOfMan {
+    @include manSize (30px, 30px, black, absolute);
+    top: 57px;
+    left: 210px;
+    border-radius: 50%;
+}
+.bodyOfMan {
+    @include manSize (7px, 50px, black, absolute);
+    top: 80px;
+    left: 213px;
+}
+.leftHand {
+    @include manSize (20px, 4px, black, absolute);
+    top: 94px;
+    left: 213px;
+    transform: rotate(-25deg);
+}
+.rightHand {
+    @include manSize (20px, 4px, black, absolute);
+    top: 100px;
+    left: 213px;
+    transform: rotate(5deg);
+}
+.leftLeg {
+    @include manSize (4px, 40px, black, absolute);
+    top: 125px;
+    left: 210px;
+    transform: rotate(10deg);
+}
+.rightLeg {
+    @include manSize (4px, 40px, black, absolute);
+    top: 125px;
+    left: 219px;
+    transform: rotate(-10deg);
+}

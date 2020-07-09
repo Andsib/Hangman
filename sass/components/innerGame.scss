@@ -1,0 +1,49 @@
+.wordGameWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.guessWord {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+}
+.chosenLettersBox {
+    border: 1px solid black;
+    background-color: lightblue;
+    color: black;
+    width: 300px;
+    height: 300px;
+    text-align: left;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 5px;
+    position: relative;
+    resize: none;
+}
+.hungManBox {
+    border: 1px solid black;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.letterBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border: 1px solid black;
+    background-color: sandybrown;
+    border-radius: 5px;
+}
+.hiddenLetter {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    visibility: hidden;
+}

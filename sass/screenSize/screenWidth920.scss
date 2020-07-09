@@ -1,0 +1,117 @@
+@media screen and (max-width: 920px) {
+    .mainTitle {
+        width: 420px;
+        background-size: 60px 60px;
+        background-position: left;
+        font-size: 52px;
+        margin: 20px auto;
+    }
+    .soundBox {
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .backButton {
+        width: 40px;
+        font-size: 22px;
+        border-radius: 50%;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    .game {
+        padding: 0px;
+    }
+    .userLetterWrapper {
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px 0px;
+    }
+    .enterSection {
+        width: 100px;
+    }
+    .chosenLettersBox {
+        width: 45%;
+        height: 200px;
+        font-size: 18px;
+        letter-spacing: 5px;
+        overflow: auto;
+    }
+    .hungManBox {
+        width: 45%;
+        height: 200px;
+    }
+    .letterBox {
+        width: 30px;
+        height: 30px;
+        margin: 0px 3px;
+    }
+    .bottomLine {
+        width: 150px;
+        height: 3px;
+        bottom: 5px;
+        left: 5px;
+    }
+    .mainLine {
+        width: 3px;
+        height: 182px;
+        bottom: 7px;
+        left: 5px;
+    }
+    .upperLine {
+        width: 160px;
+        height: 3px;
+        top: 7px;
+        left: 5px;
+    }
+    .supportLine {
+        width: 40px;
+        height: 3px;
+        top: 15px;
+        left: 5px;
+    }
+    .ropeLine {
+        width: 3px;
+        height: 20px;
+        top: 10px;
+        left: 162px;
+    }
+    .headOfMan {
+        width: 25px;
+        height: 25px;
+        top: 23px;
+        left: 160px;
+    }
+    .bodyOfMan {
+        width: 4px;
+        height: 40px;
+        top: 35px;
+        left: 160px;
+    }
+    .leftHand {
+        width: 10px;
+        height: 3px;
+        top: 52px;
+        left: 163px;
+    }
+    .rightHand {
+        width: 10px;
+        height: 3px;
+        top: 57px;
+        left: 163px;
+    }
+    .leftLeg {
+        width: 3px;
+        height: 30px;
+        top: 70px;
+        left: 158px;
+    }
+    .rightLeg {
+        width: 3px;
+        height: 30px;
+        top: 70px;
+        left: 165px;
+    }
+}

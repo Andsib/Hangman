@@ -1,0 +1,27 @@
+@import '../mixin.scss';
+
+.layer {
+    @include layer(none, fixed, 0, 0, 0, 0, 1, center);
+}
+.layerBlock {
+    @include layer(block, fixed, 0, 0, 0, 0, 1, center);
+}
+.infoText {
+    display: block;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: darkred;
+}
+.okButton {
+    @include button(pointer, none, 10px, 30%, 10px);
+    border: 1px solid black;
+    transition: all 0.3s;
+}
+.okButton:hover {
+    background: grey;
+    color: white;
+}

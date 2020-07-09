@@ -1,0 +1,61 @@
+@import '../mixin.scss';
+
+.game {
+    padding: 20px;
+    display: none;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userLetterWrapper {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px 0px;
+    background: linear-gradient(to top, grey, white);
+    border-radius: 10px;
+}
+.enterSection {
+    text-transform: lowercase;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+}
+.submit {
+    @include button(pointer, none, 10px, none, 5px);
+    margin-top: 10px;
+    padding: 5px;
+    font-weight: bold;
+    color: red;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.submit:hover {
+    color: black;
+    background: linear-gradient(to top, darkred, red);
+}
+.backButton {
+    background-color: lightgrey;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    font-size: 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 17%;
+    transition: all 0.3s;
+}
+.backButton:hover {
+    background-color: black;
+    color: red;
+}
