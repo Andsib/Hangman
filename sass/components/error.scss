@@ -1,5 +1,3 @@
-@import '../mixin.scss';
-
 .layer {
     @include layer(none, fixed, 0, 0, 0, 0, 1, center);
 }
